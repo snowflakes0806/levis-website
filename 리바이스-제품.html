@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>제품</title>
+
+    <!-- Pretendard 폰트 -->
+    <link
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ---------------- 기본 스타일 ---------------- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #0f0f0f;
+        color: #f1f1f1;
+        font-family: "Pretendard", sans-serif;
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* ---------------- 로고 ---------------- */
+      .logo {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 20px;
+      }
+
+      .logo img {
+        width: 200px;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+
+      .logo img:hover {
+        transform: scale(1.05);
+      }
+
+      /* ---------------- 제목 ---------------- */
+      h1 {
+        text-align: center;
+        color: #fff;
+        font-size: 2.8rem;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+      }
+
+      h1::before {
+        content: "Levi's ";
+        color: #c41230;
+      }
+
+      /* ---------------- 소개문 ---------------- */
+      .intro {
+        max-width: 800px;
+        margin: 0 auto 50px;
+        text-align: center;
+        font-size: 1.1rem;
+        color: #ddd;
+        line-height: 1.9;
+      }
+
+      /* ---------------- 제품 리스트 ---------------- */
+      .product-list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 80px;
+      }
+
+      .product-list li {
+        position: relative;
+        background-color: #1a1a1a;
+        padding: 12px 30px; /* 👈 크기 줄임 */
+        border-radius: 0;
+        text-align: center;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+      }
+
+      .product-list li::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        background-color: #c41230;
+        z-index: 0;
+        transition: width 0.5s ease;
+      }
+
+      .product-list li:hover::before {
+        width: 100%;
+      }
+
+      .product-list li a {
+        position: relative;
+        z-index: 1;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #f1f1f1;
+        letter-spacing: 0.3px;
+        transition: color 0.3s ease;
+      }
+
+      .product-list li:hover a {
+        color: #fff;
+      }
+
+      .product-list li:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+      }
+
+      /* ---------------- SNS 아이콘 ---------------- */
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-bottom: 10px;
+      }
+
+      .social-icons img {
+        width: 28px;
+        height: 28px;
+        transition: transform 0.3s ease;
+      }
+
+      .social-icons img:hover {
+        transform: scale(1.2);
+      }
+
+      /* ---------------- 하단 문구 ---------------- */
+      h4 {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        margin: 0;
+        color: #aaa;
+        font-weight: 400;
+        background: rgba(15, 15, 15, 0.95);
+      }
+
+      /* ---------------- 스크롤 애니메이션 ---------------- */
+      .container,
+      .product-list li,
+      .intro {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 1s ease-out;
+      }
+
+      .show {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+
+      /* ---------------- 반응형 ---------------- */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+        .product-list {
+          flex-direction: column;
+          gap: 20px;
+        }
+        .product-list li {
+          width: 70%;
+          margin: 0 auto;
+        }
+        .intro {
+          font-size: 1rem;
+          padding: 0 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="logo">
+      <a href="리바이스-본문.html">
+        <img src="로고.png" alt="Levi's Logo" />
+      </a>
+    </div>
+
+    <div class="container">
+      <h1>Products</h1>
+
+      <p class="intro">
+        리바이스는 150년이 넘는 시간 동안 ‘진정한 오리지널’의 가치를 지켜왔습니다.<br />
+        시대마다 새로운 해석을 더하며, 청바지를 단순한 작업복이 아닌 문화의 언어로
+        바꿔왔습니다.<br />
+        오리지널 청바지 501을 비롯한 대표 제품, 그리고 리바이스 빈티지 LVC 라인까지
+        브랜드의 역사와 정신이 담긴 다양한 제품을 만나보세요.
+      </p>
+
+      <ul class="product-list">
+        <li><a href="리바이스-상의.html">Iconic Top</a></li>
+        <li><a href="리바이스-하의.html">Iconic Bottom</a></li>
+      </ul>
+    </div>
+
+    <!-- SNS 아이콘 -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/levis/" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+          alt="Instagram"
+        />
+      </a>
+      <a href="https://www.facebook.com/Levis/" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+          alt="Facebook"
+        />
+      </a>
+      <a href="https://www.youtube.com/user/levis" target="_blank">
+        <img
+          src="https://i.postimg.cc/mDxH7m0s/youtube-color-svgrepo-com.png"
+          alt="YouTube"
+        />
+      </a>
+    </div>
+
+    <h4>"Quality Never Goes Out of Style"</h4>
+
+    <script>
+      // 스크롤 등장 애니메이션
+      const elements = document.querySelectorAll(".container, .product-list li, .intro");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("show");
+          });
+        },
+        { threshold: 0.1 }
+      );
+      elements.forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

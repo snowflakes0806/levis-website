@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>About Levi’s</title>
+
+    <!-- Pretendard 폰트 -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #111;
+        color: #fff;
+        font-family: "Pretendard", sans-serif;
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* 헤더 */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+        z-index: 1000;
+        backdrop-filter: blur(6px);
+      }
+
+      header img {
+        width: 120px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      header img:hover {
+        transform: scale(1.05);
+      }
+
+      .campaign-btn {
+        background-color: #c41230;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .campaign-btn:hover {
+        background-color: #e32636;
+      }
+
+      /* 섹션 간격 조정 */
+      section {
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 120px 20px 60px;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 1s ease;
+      }
+
+      section.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      section h2 {
+        font-size: 2.2em;
+        margin-bottom: 15px;
+        color: #c41230;
+        font-weight: 700;
+      }
+
+      section p,
+      section ul {
+        max-width: 800px;
+        font-size: 1.05em;
+        text-align: center;
+        color: #eee;
+      }
+
+      /* 🔹 불릿 제거 */
+      section ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      section ul li {
+        margin: 8px 0;
+      }
+
+      section img {
+        margin: 15px 8px;
+        border-radius: 10px;
+        max-height: 220px;
+        object-fit: cover;
+      }
+
+      /* 더보기 기능 */
+      .more-text {
+        display: none;
+      }
+
+      .read-more {
+        display: inline-block;
+        margin-top: 10px;
+        color: #c41230;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 0.95em;
+      }
+
+      /* SNS */
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 40px 0 10px;
+      }
+
+      .social-icons img {
+        width: 28px;
+        height: 28px;
+      
+        transition: transform 0.3s ease;
+      }
+
+      .social-icons img:hover {
+        transform: scale(1.15);
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px 0 30px;
+        color: #aaa;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 헤더 -->
+    <header>
+      <a href="리바이스-본문.html">
+        <img src="로고.png" alt="Levi's Logo" />
+      </a>
+      <a href="리바이스-캠페인.html" class="campaign-btn" target="_blank"
+        >지속가능한 캠페인</a
+      >
+    </header>
+
+    <!-- About -->
+    <section>
+      <h2>About Levi’s</h2>
+      <p>
+        1853년, 리바이 스트라우스가 샌프란시스코에서 시작한 작은 의류 회사는
+        지금 전 세계가 사랑하는 청바지 브랜드로 성장했습니다.
+        <span class="more-text">
+          리바이스는 단순한 옷이 아닌, 자유와 개성, 진정성의 상징입니다.
+        </span>
+      </p>
+      <span class="read-more">더보기</span>
+    </section>
+
+    <!-- 브랜드 철학 -->
+    <section>
+      <h2>브랜드 철학</h2>
+      <img src="철학.jpeg" alt="리바이스 철학 이미지" />
+      <p>
+        리바이스는 언제나 ‘진짜 나다움(Authenticity)’을 믿습니다.
+        <span class="more-text">
+          유행을 따르기보다 자신만의 스타일을 표현하고, 편안함 속에서도
+          자신감을 잃지 않는 모든 사람들을 위해 만들어집니다.
+        </span>
+      </p>
+      <span class="read-more">더보기</span>
+    </section>
+
+    <!-- 창립 이야기 -->
+    <section>
+      <h2>창립 이야기</h2>
+      <img src="리바이스 아저씨.png" alt="리바이 스트라우스 이미지" />
+      <p>
+        1853년, 독일 이민자 리바이 스트라우스는 미국 서부의 골드러시 시대에
+        샌프란시스코로 향했습니다.
+        <span class="more-text">
+          그는 광부들의 작업복을 개선하여 최초의 청바지 501®을 탄생시켰습니다.
+        </span>
+      </p>
+      <span class="read-more">더보기</span>
+    </section>
+
+    <!-- 브랜드 가치 -->
+    <section>
+      <h2>브랜드 가치</h2>
+      <ul>
+        <li>품질(Quality) : 변하지 않는 내구성과 신뢰성</li>
+        <li>자유(Freedom) : 누구나 자신을 표현할 수 있는 옷</li>
+        <li>포용성(Inclusivity) : 모두를 위한 브랜드</li>
+        <li>지속가능성(Sustainability) : 더 나은 지구를 위한 선택</li>
+      </ul>
+    </section>
+
+    <!-- 문화 -->
+    <section>
+      <h2>리바이스와 문화</h2>
+      <div>
+        <img src="문화01.jpeg" alt="문화1" />
+        <img src="문화02.jpeg" alt="문화2" />
+        <img src="문화03.jpeg" alt="문화3" />
+      </div>
+      <p>리바이스는 음악, 예술, 영화, 청춘 문화를 함께 만들어온 문화의 아이콘입니다.</p>
+    </section>
+
+    <!-- 오늘의 리바이스 -->
+    <section>
+      <h2>오늘의 리바이스</h2>
+      <img src="오늘의 리바이스.jpeg" alt="오늘의 리바이스" />
+      <p>
+        오늘날 리바이스는 전 세계 100여 개국에서 사랑받으며,
+        <span class="more-text">
+          새로운 협업과 지속 가능한 철학을 이어가고 있습니다. “리바이스는 단순한
+          옷이 아니라, 삶의 한 부분이다.”
+        </span>
+      </p>
+      <span class="read-more">더보기</span>
+    </section>
+
+    <!-- SNS -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/levis/" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+          alt="Instagram"
+        />
+      </a>
+      <a href="https://www.facebook.com/Levis/" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+          alt="Facebook"
+        />
+      </a>
+      <a href="https://www.youtube.com/user/levis" target="_blank">
+        <img
+          src="https://i.postimg.cc/mDxH7m0s/youtube-color-svgrepo-com.png"
+          alt="YouTube"
+        />
+      </a>
+    </div>
+
+    <footer>“Quality Never Goes Out of Style”</footer>
+
+    <script>
+      // 스크롤 애니메이션
+      const sections = document.querySelectorAll("section");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      sections.forEach((section) => observer.observe(section));
+
+      // 더보기 기능
+      document.querySelectorAll(".read-more").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const moreText = btn.previousElementSibling.querySelector(".more-text");
+          if (moreText.style.display === "inline") {
+            moreText.style.display = "none";
+            btn.textContent = "더보기";
+          } else {
+            moreText.style.display = "inline";
+            btn.textContent = "접기";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

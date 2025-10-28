@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Iconic Bottom</title>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0f0f0f;
+      color: #f5f5f5;
+      font-family: "Pretendard", sans-serif;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 50px auto 100px;
+      padding: 0 20px;
+    }
+
+    .container > a img {
+      display: block;
+      margin: 0 auto 30px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #fff;
+      margin-bottom: 40px;
+    }
+
+    .product {
+      display: flex;
+      align-items: center;
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      padding: 20px 40px;
+      gap: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .product img {
+      width: 220px;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .product-info {
+      flex: 1;
+    }
+
+    .product-info h3 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 10px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .product-info h3::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background-color: #c41230;
+      margin-top: 8px;
+      border-radius: 1px;
+    }
+
+    .product-info p {
+      color: #ddd;
+      font-size: 1rem;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 60px;
+    }
+
+    .social-icons img {
+      width: 32px;
+      height: 32px;
+      
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    h4 {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: 15px;
+      margin: 0;
+      color: #aaa;
+      font-weight: 400;
+      background: rgba(15, 15, 15, 0.95);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <a href="리바이스-본문.html">
+      <img src="로고.png" width="200" alt="리바이스 로고">
+    </a>
+
+    <h1>Iconic Bottom</h1>
+
+    <div class="product">
+      <img src="501.png" alt="501 오리지널 핏 진">
+      <div class="product-info">
+        <h3>501 오리지널 핏 진</h3>
+        <p>1873년에 처음 출시된 세계 최초의 청바지로, 버튼 플라이와 스트레이트 핏 디자인이 특징입니다.  
+        150년이 넘는 시간 동안 리바이스의 상징으로 자리 잡은 제품으로, 시대를 초월한 스타일을 보여줍니다.</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="505.png" alt="505 레귤러 핏">
+      <div class="product-info">
+        <h3>505 레귤러 핏</h3>
+        <p>1967년 출시된 지퍼 플라이 진으로, 여유로운 실루엣과 편안한 착용감을 자랑합니다.  
+        스트레이트 레그 라인으로 어떤 스타일에도 자연스럽게 어울리는 클래식 모델입니다.</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="511.png" alt="511 슬림 핏">
+      <div class="product-info">
+        <h3>511 슬림 핏</h3>
+        <p>슬림한 실루엣과 세련된 디자인으로, 현대적인 감각을 더한 리바이스의 대표적인 핏입니다.  
+        도시적인 룩을 연출하기에 이상적인 스타일로, 다양한 컬러와 워시로 출시됩니다.</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="721.png" alt="721 하이라이즈 스키니">
+      <div class="product-info">
+        <h3>721 하이라이즈 스키니</h3>
+        <p>허리를 강조하고 다리를 길어 보이게 하는 여성용 하이라이즈 스키니 진입니다.  
+        부드러운 소재감과 완벽한 피팅으로 스타일과 편안함을 모두 갖춘 아이템입니다.</p>
+      </div>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/levis/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/Levis/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+      </a>
+      <a href="https://www.youtube.com/user/levis" target="_blank">
+        <img src="https://i.postimg.cc/mDxH7m0s/youtube-color-svgrepo-com.png" alt="YouTube">
+      </a>
+    </div>
+  </div>
+
+  <h4>"Quality Never Goes Out of Style"</h4>
+</body>
+</html>
