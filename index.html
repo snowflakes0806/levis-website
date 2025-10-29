@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Levi's</title>
+    <meta charset="utf-8" />
+    <style>
+      /* ✅ 전체 리셋 및 기본 스타일 */
+      body {
+        margin: 0;
+        background-color: #000;
+        color: #fff;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-align: center;
+        overflow-x: hidden;
+      }
+
+      /* ✅ 컨테이너 (로고 영역) */
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+      }
+
+      .container img {
+        width: 180px;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+      }
+
+      .container img:hover {
+        opacity: 0.8;
+        transform: scale(1.05);
+      }
+
+      /* ✅ 제목 (Levi’s Red 강조 + 애니메이션) */
+      h1 {
+        color: #fff; /* 기본 흰색 */
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        font-size: 2.5em;
+        margin-top: 40px;
+        letter-spacing: 0.5px;
+        animation: fadeIn 1.2s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ✅ Levi’s 부분만 붉은색으로 페이드 인 */
+      h1 .highlight {
+        color: #c41230;
+        animation: highlightFade 1.5s ease-in forwards;
+      }
+
+      @keyframes highlightFade {
+        from {
+          color: #fff;
+        }
+        to {
+          color: #c41230;
+        }
+      }
+
+      h1 .highlight:hover {
+        color: #e32636; /* hover 시 더 밝은 빨강 */
+      }
+
+      /* ✅ 링크 밑줄 제거 */
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.3s ease;
+      }
+
+      /* ✅ 리스트 (About / Products) */
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 40px 0;
+        display: inline-block;
+        text-align: left;
+        font-size: 1.1em;
+      }
+
+      ul li {
+        margin: 12px 0;
+      }
+
+      ul li a {
+        position: relative;
+        padding-bottom: 2px;
+      }
+
+      ul li a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: #c41230;
+        transition: width 0.3s ease;
+      }
+
+      ul li a:hover::after {
+        width: 100%;
+      }
+
+      /* ✅ SNS 아이콘 (Diesel 스타일 하단 고정) */
+      .social-icons {
+        position: fixed;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+      }
+
+      .social-icons img {
+        width: 28px;
+        height: 28px;
+        filter: grayscale(100%) brightness(80%);
+        transition: filter 0.3s ease, transform 0.3s ease;
+      }
+
+      .social-icons img:hover {
+        filter: brightness(100%) saturate(150%);
+        transform: scale(1.1);
+      }
+
+      /* ✅ 하단 문구 (Diesel 감성) */
+      h4 {
+        position: fixed;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #999;
+        font-size: 0.9em;
+        letter-spacing: 1px;
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <img
+        src="logo.png"
+        width="200"
+        alt="이미지"
+        onclick="window.open('https://levi.co.kr', '_blank')"
+      />
+    </div>
+
+    <h1>
+      "The History and Iconic Products of
+      <a
+        href="https://levi.co.kr/?srsltid=AfmBOorN-oyQUHUeGd7fIyaxutdvcuz3_K_AJ0vzMVAO75N12gf1AqzH"
+        target="_blank"
+      >
+        <span class="highlight">Levi's</span>
+      </a>
+      "
+    </h1>
+
+    <ul>
+      <li><a href="리바이스-역사.html">About Levi's</a></li>
+      <li><a href="리바이스-제품.html">Products</a></li>
+    </ul>
+
+    <!-- SNS 아이콘 영역 -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/levis/" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+          alt="Instagram"
+        />
+      </a>
+      <a href="https://www.facebook.com/Levis/" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+          alt="Facebook"
+        />
+      </a>
+      <a href="https://www.youtube.com/user/levis" target="_blank">
+        <img
+          src="https://i.postimg.cc/mDxH7m0s/youtube-color-svgrepo-com.png"
+          alt="YouTube"
+        />
+      </a>
+    </div>
+
+    <h4>"Quality Never Goes Out of Style"</h4>
+  </body>
+</html>
